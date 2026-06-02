@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Contact & Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="page-header">
+        <h1>Contact & Feedback</h1>
+    </header>
+
+    <nav aria-label="Main navigation" class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="content.html">Content</a></li>
+            <li><a href="data.html">Projects</a></li>
+            <li><a href="portfolio.html">CV</a></li>
+            <li><a href="contact.html">Contact & Feedback</a></li>
+            <li><a href="card.html">Card</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content" class="contact-main">
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <p>If you would like to share feedback or learn more about community involvement, please use the form below!</p>
+        </section>
+        <section>
+            <h2>Send a message</h2>
+            <form method="post" action="#" aria-label="Contact form" class="styled-form">
+    <fieldset>
+        <legend>Your details</legend>
+
+        <label for="name">Full name (required)</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email address (required)</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="role">Your connection to volunteering (optional)</label>
+        <input type="text" id="role" name="role" aria-describedby="role-hint">
+        <p id="role-hint" class="form-hint">For example: student, volunteer, visitor, community member</p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Your message</legend>
+        <label for="topic">Topic (required)</label>
+        <select id="topic" name="topic" required>
+            <option value="">Select a topic</option>
+            <option value="feedback">Website feedback</option>
+            <option value="volunteering">Volunteering experience</option>
+            <option value="leadership">Leadership and teamwork</option>
+            <option value="community">Community projects</option>
+            <option value="other">Other</option>
+        </select>
+        <label for="subject">Subject (required)</label>
+        <input type="text" id="subject" name="subject" required aria-describedby="subject-hint">
+        <p id="subject-hint" class="form-hint">Example: question about volunteering, feedback on the project, interest in community work</p>
+
+        <label for="msg">Message (required)</label>
+        <textarea id="msg" name="message" rows="6" required></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>Reason for contact</legend>
+        <label>
+            <input type="radio" name="reason" value="feedback" required>
+            I want to give feedback.
+        </label>
+        <label>
+            <input type="radio" name="reason" value="question">
+            I want to ask a question.
+        </label>
+
+        <label>
+            <input type="radio" name="reason" value="interest">
+            I am interested in volunteering.
+        </label>
+    </fieldset>
+    <button type="submit">Send message</button>
+    </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Ardelean Alesia · 2026</p>
+    </footer>
+</body>
+</html>

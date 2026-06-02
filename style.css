@@ -1,0 +1,266 @@
+header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #4A90E2;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    background-color: #357ABD;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E6F3FF;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #003366;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-item img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(93, 120, 187);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.hero {
+    background-image: url('img_hero.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 51, 102, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin: 0 0 10px 0;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.919);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4A90E2;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #F0F8FF;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+tr:hover {
+    background-color: #B0E0E6;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+}
+/* Portfolio page additions */
+
+.error-message {
+    color: #b00020;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    min-height: 1.2rem;
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"],
+select[aria-invalid="true"] {
+    border: 2px solid #b00020;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#projectsTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+#projectsTable caption {
+    font-weight: bold;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+#projectsTable th,
+#projectsTable td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.project-thumb {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+    .styled-form button {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
+
+.home-layout {
+    display: flex;
+    gap: 35px;
+    align-items: flex-start;
+}
+
+.home-text {
+    flex: 2;
+}
+
+.before-after-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.before-after-column figure {
+    margin: 0;
+    background-color: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgb(93, 120, 187);
+}
+
+.before-after-column img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.before-after-column figcaption {
+    margin-top: 10px;
+    color: #003366;
+    line-height: 1.4;
+}
+
+.before-after-column figcaption strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.before-after-column figcaption span {
+    display: block;
+    color: black;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .home-layout {
+        flex-direction: column;
+    }
+
+    .before-after-column {
+        width: 100%;
+    }
+}

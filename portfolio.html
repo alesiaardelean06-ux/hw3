@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="page-header">
+        <h1>Portfolio</h1>
+    </header>
+
+    <nav aria-label="Main navigation" class="main-nav">
+        <ul>
+           <li><a href="index.html">Home</a></li>
+            <li><a href="content.html">Content</a></li>
+            <li><a href="data.html">Projects</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact & Feedback</a></li>
+            <li><a href="card.html">Card</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content" class="contact-main">
+        <section class="contact-card">
+            <h2>Add a project</h2>
+            <p class="form-hint">Complete the form below to add a project to your portfolio.</p>
+
+            <form method="post" action="#" id="portfolioForm" aria-label="Project form" class="styled-form" novalidate>
+                <fieldset>
+                    <legend>Project details</legend>
+
+                    <label for="projectName">Project name (required)</label>
+                    <input type="text" id="projectName" name="projectName" required aria-describedby="projectName-error">
+                    <p id="projectName-error" class="error-message"></p>
+
+                    <label for="description">Description (required)</label>
+                    <textarea id="description" name="description" rows="6" required aria-describedby="description-error"></textarea>
+                    <p id="description-error" class="error-message"></p>
+
+                    <label for="projectUrl">Project URL (required)</label>
+                    <input type="url" id="projectUrl" name="projectUrl" placeholder="https://example.com" required aria-describedby="projectUrl-error">
+                    <p id="projectUrl-error" class="error-message"></p>
+
+                    <label for="technologies">Technologies (required)</label>
+                    <select id="technologies" name="technologies" required aria-describedby="technologies-hint technologies-error">
+                        <option value="">Choose a technology</option>
+                        <option value="HTML and CSS">HTML and CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Figma">Figma</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <p id="technologies-hint" class="form-hint">Choose the main technology used in the project.</p>
+                    <p id="technologies-error" class="error-message"></p>
+
+                    <label for="projectImage">Project image (JPG, PNG or WEBP, max 2MB)</label>
+                    <input type="file" id="projectImage" name="projectImage" accept=".jpg,.jpeg,.png,.webp" required aria-describedby="projectImage-error">
+                    <p id="projectImage-error" class="error-message"></p>
+
+                    <label for="completionDate">Completion date (required)</label>
+                    <input type="date" id="completionDate" name="completionDate" required aria-describedby="completionDate-error">
+                    <p id="completionDate-error" class="error-message"></p>
+                </fieldset>
+
+                <button type="submit">Add project</button>
+
+                <p id="formMessage" class="form-hint" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="contact-card">
+            <h2>Projects table</h2>
+
+            <div class="table-wrapper">
+                <table id="projectsTable">
+                    <caption>Submitted portfolio projects</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Project name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">Technologies</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Completion date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="projectsBody">
+                        <tr id="emptyRow">
+                            <td colspan="6">No projects added yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Ardelean Alesia · Elemente de Web Design · Semesterul II</p>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
