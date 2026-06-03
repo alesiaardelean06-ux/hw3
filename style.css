@@ -153,19 +153,12 @@ footer {
     background-color: #003366;
     color: white;
 }
-/* Portfolio page additions */
 
 .error-message {
     color: #b00020;
     font-size: 0.9rem;
     margin-top: 0.25rem;
     min-height: 1.2rem;
-}
-
-input[aria-invalid="true"],
-textarea[aria-invalid="true"],
-select[aria-invalid="true"] {
-    border: 2px solid #b00020;
 }
 
 .table-wrapper {
@@ -185,8 +178,7 @@ select[aria-invalid="true"] {
     text-align: left;
 }
 
-#projectsTable th,
-#projectsTable td {
+#projectsTable th, #projectsTable td {
     border: 1px solid #ddd;
     padding: 0.75rem;
     text-align: left;
@@ -229,8 +221,12 @@ select[aria-invalid="true"] {
     padding: 12px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgb(93, 120, 187);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.before-after-column figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgb(93, 120, 187);
+}
 .before-after-column img {
     width: 100%;
     height: 210px;
@@ -255,7 +251,7 @@ select[aria-invalid="true"] {
     font-size: 0.95rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .home-layout {
         flex-direction: column;
     }
